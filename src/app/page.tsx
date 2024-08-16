@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [image, setImage] = useState<string | null>(null);
@@ -45,6 +46,11 @@ export default function Home() {
       {screen === 1 && (
         <div className="grid place-items-center gap-3">
           <h1 className="text-6xl text-white">Ingredients</h1>
+          <img
+            src={image} 
+            alt="Ingredients" 
+            className="w-96 h-96 object-cover"
+          />
           <div className="overflow-x-auto">            
             <table className="table table-zebra">
               <thead>
