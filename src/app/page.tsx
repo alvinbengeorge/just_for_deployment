@@ -46,8 +46,10 @@ export default function Home() {
       {screen === 1 && (
         <div className="grid place-items-center gap-3">
           <h1 className="text-6xl text-white">Ingredients</h1>
-          <img
-            src={image} 
+          <Image
+            src={image as string}
+            width={400}
+            height={400} 
             alt="Ingredients" 
             className="w-96 h-96 object-cover"
           />
