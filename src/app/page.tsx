@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 export default function Home() {
   const [image, setImage] = useState<string | null>(null);
   const [screen, setScreen] = useState<number>(0);
+
+  useEffect(() => {}, [screen]);
   return (
     <main className="grid place-items-center w-screen h-screen">
       {screen === 0 && (
@@ -42,39 +44,46 @@ export default function Home() {
       )}
       {screen === 1 && (
         <div className="grid place-items-center gap-3">
-          <div className="overflow-x-auto">
-            <h1 className="text-4xl text-center p-2 bg-base-200 rounded-md">Ingredients</h1>
+          <h1 className="text-6xl text-white">Ingredients</h1>
+          <div className="overflow-x-auto">            
             <table className="table table-zebra">
-              {/* head */}
               <thead>
                 <tr>
-                  <th></th>
-                  <th>Name</th>
-                  <th>Job</th>
-                  <th>Favorite Color</th>
+                  <th>Index</th>
+                  <th>Item</th>
+                  <th>Amount</th>
                 </tr>
               </thead>
               <tbody>
-                {/* row 1 */}
                 <tr>
-                  <th>1</th>
-                  <td>Cy Ganderton</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
+                  <td>1</td>
+                  <td>Jaggery</td>
+                  <td>100 ml</td>
                 </tr>
-                {/* row 2 */}
                 <tr>
-                  <th>2</th>
-                  <td>Hart Hagerty</td>
-                  <td>Desktop Support Technician</td>
-                  <td>Purple</td>
+                  <td>2</td>
+                  <td>salt</td>
+                  <td>200 gms</td>
                 </tr>
-                {/* row 3 */}
                 <tr>
-                  <th>3</th>
-                  <td>Brice Swyre</td>
-                  <td>Tax Accountant</td>
-                  <td>Red</td>
+                  <td>3</td>
+                  <td>tor dal</td>
+                  <td>200 gms</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>rice</td>
+                  <td>500 gms</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Rajma</td>
+                  <td>200 gms</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>atta</td>
+                  <td>1 kg</td>
                 </tr>
               </tbody>
             </table>
